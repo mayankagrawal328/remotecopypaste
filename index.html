@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clipboard Data</title>
+</head>
+<body>
+    <h1>Clipboard Data</h1>
+    <div id="data"></div>
+
+    <script>
+        const fetchData = async () => {
+            const response = await fetch('http://localhost:3000/api/data');
+            const result = await response.json();
+            document.getElementById('data').textContent = result.data;
+        };
+
+        setInterval(fetchData, 1000);  // Fetch data every second
+    </script>
+</body>
+</html>
