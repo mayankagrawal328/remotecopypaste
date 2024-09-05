@@ -10,7 +10,7 @@
 
     <script>
         const fetchData = async () => {
-            const response = await fetch('http://localhost:3000/api/data');
+            const response = await fetch('http://localhost:3000/api/data1');
             const result = await response.json();
             document.getElementById('data').textContent = result.data;
         };
