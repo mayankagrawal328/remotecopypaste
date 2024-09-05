@@ -10,13 +10,13 @@ app.use(cors());
 
 let copiedData = "";
 
-app.post('/api/data1', (req, res) => {
+app.post('/api/data', (req, res) => {
     copiedData = req.body.data;
     console.log(`Data received: ${copiedData}`);
     res.sendStatus(200);
 });
 
-app.get('/api/data1', (req, res) => {
+app.get('/api/data', (req, res) => {
     res.send( copiedData );
 });
 
